@@ -11,8 +11,16 @@ module.exports = {
         PRODUCT_DELETED: 'Product Deleted Successfully!',
         PRODUCT_NOT_FOUND: 'Product Not Found!',
     },
+    userMessage:{
+        SIGNUP_SUCCESS: 'Signup Successfully!',
+        LOGIN_SUCCESS : 'Login Successfully!',
+        DUPLICATE_EMAIL: 'User already exists with given email',
+        USER_NOT_FOUND: 'User Not Found!',
+        INVALID_PASSWORD: 'Incorrect Password!'
+    },
     requestValidationMessage: {
-        BAD_REQUEST: 'Invalid fields!'
+        BAD_REQUEST: 'Invalid fields!',
+        TOKEN_MISSING: 'Token missing from header'
     },
     databaseMessage: {
         INVALID_ID: 'Invalid Id'

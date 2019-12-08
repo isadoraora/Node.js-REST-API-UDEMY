@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/v1/product', require('./routes/produsctRoutes'));
+app.use('/api/v1/user', require('./routes/userRoutes'))
 
 app.get('/', (res, req, next) => {
     res.setEncoding('Hello from the API Server')

@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
-const ProductSchema = new mongoose.Schema({
-    name: String,
-    price: Number,
-    brand: String
+const userSchema = new mongoose.Schema({
+    email: String,
+    password: String
 }, {
     timestamps: true,
     toObject: {
         transform: function (doc, ret, options) {
             ret.id = ret._id;
             delete ret._id;
+            delete ret.password;
             delete ret.__v;
             return ret;
         }
@@ -17,4 +17,4 @@ const ProductSchema = new mongoose.Schema({
 }
 );
 
-module.exports = mongoose.model('Product', ProductSchema);
+module.exports = mongoose.model('User', userSchema);
